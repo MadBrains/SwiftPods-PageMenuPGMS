@@ -63,19 +63,19 @@
 		3A6E55E7226A0210003E84DD /* PageMenuPGMS */ = {
 			isa = PBXGroup;
 			children = (
-				3A6E55F0226A04E1003E84DD /* PageMenuPGMS */,
+				3A6E55F0226A04E1003E84DD /* Classes */,
 				3A6E55E8226A0210003E84DD /* PageMenuPGMS.h */,
 				3A6E55E9226A0210003E84DD /* Info.plist */,
 			);
 			path = PageMenuPGMS;
 			sourceTree = "<group>";
 		};
-		3A6E55F0226A04E1003E84DD /* PageMenuPGMS */ = {
+		3A6E55F0226A04E1003E84DD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				3A6E55F1226A0549003E84DD /* PageMenu.swift */,
 			);
-			path = PageMenuPGMS;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		90056DF678F71E56C7066531 /* Pods */ = {
