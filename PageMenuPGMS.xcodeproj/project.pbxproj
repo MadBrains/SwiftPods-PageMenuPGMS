@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10BE24219756B2DE80D48C72 /* libPods-PageMenuPGMS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F212B6B90B1A5291DF0212 /* libPods-PageMenuPGMS.a */; };
 		3A6E55EA226A0210003E84DD /* PageMenuPGMS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A6E55E8226A0210003E84DD /* PageMenuPGMS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A6E55F2226A0549003E84DD /* PageMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E55F1226A0549003E84DD /* PageMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07F212B6B90B1A5291DF0212 /* libPods-PageMenuPGMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PageMenuPGMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6E55E5226A0210003E84DD /* PageMenuPGMS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PageMenuPGMS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6E55E8226A0210003E84DD /* PageMenuPGMS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageMenuPGMS.h; sourceTree = "<group>"; };
 		3A6E55E9226A0210003E84DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A6E55F1226A0549003E84DD /* PageMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenu.swift; sourceTree = "<group>"; };
+		D1A45B6CF7D62822BD7E2C69 /* Pods-PageMenuPGMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageMenuPGMS.debug.xcconfig"; path = "Target Support Files/Pods-PageMenuPGMS/Pods-PageMenuPGMS.debug.xcconfig"; sourceTree = "<group>"; };
+		D2F17E8B0FB4423017560DE8 /* Pods-PageMenuPGMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PageMenuPGMS.release.xcconfig"; path = "Target Support Files/Pods-PageMenuPGMS/Pods-PageMenuPGMS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,17 +27,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BE24219756B2DE80D48C72 /* libPods-PageMenuPGMS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09E0A65F92539D37148FD69B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07F212B6B90B1A5291DF0212 /* libPods-PageMenuPGMS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A6E55DB226A0210003E84DD = {
 			isa = PBXGroup;
 			children = (
 				3A6E55E7226A0210003E84DD /* PageMenuPGMS */,
 				3A6E55E6226A0210003E84DD /* Products */,
+				90056DF678F71E56C7066531 /* Pods */,
+				09E0A65F92539D37148FD69B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +63,28 @@
 		3A6E55E7226A0210003E84DD /* PageMenuPGMS */ = {
 			isa = PBXGroup;
 			children = (
+				3A6E55F0226A04E1003E84DD /* PageMenuPGMS */,
 				3A6E55E8226A0210003E84DD /* PageMenuPGMS.h */,
 				3A6E55E9226A0210003E84DD /* Info.plist */,
 			);
 			path = PageMenuPGMS;
+			sourceTree = "<group>";
+		};
+		3A6E55F0226A04E1003E84DD /* PageMenuPGMS */ = {
+			isa = PBXGroup;
+			children = (
+				3A6E55F1226A0549003E84DD /* PageMenu.swift */,
+			);
+			path = PageMenuPGMS;
+			sourceTree = "<group>";
+		};
+		90056DF678F71E56C7066531 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1A45B6CF7D62822BD7E2C69 /* Pods-PageMenuPGMS.debug.xcconfig */,
+				D2F17E8B0FB4423017560DE8 /* Pods-PageMenuPGMS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,6 +105,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A6E55ED226A0210003E84DD /* Build configuration list for PBXNativeTarget "PageMenuPGMS" */;
 			buildPhases = (
+				486CB67B1B4B5C4A451BFB2A /* [CP] Check Pods Manifest.lock */,
 				3A6E55E0226A0210003E84DD /* Headers */,
 				3A6E55E1226A0210003E84DD /* Sources */,
 				3A6E55E2226A0210003E84DD /* Frameworks */,
@@ -95,6 +131,7 @@
 				TargetAttributes = {
 					3A6E55E4226A0210003E84DD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -125,11 +162,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		486CB67B1B4B5C4A451BFB2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PageMenuPGMS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A6E55E1226A0210003E84DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6E55F2226A0549003E84DD /* PageMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +323,9 @@
 		};
 		3A6E55EE226A0210003E84DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1A45B6CF7D62822BD7E2C69 /* Pods-PageMenuPGMS.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -277,14 +342,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = antonPersonalTeam.PageMenuPGMS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		3A6E55EF226A0210003E84DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2F17E8B0FB4423017560DE8 /* Pods-PageMenuPGMS.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -301,7 +369,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = antonPersonalTeam.PageMenuPGMS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
