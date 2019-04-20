@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol PageMenuViewDelegate: class {
+public protocol PageMenuViewDelegate: class {
     func willMoveToPage(_ pageMenu: PageMenuView, from viewController: UIViewController, index currentViewControllerIndex : Int)
     func didMoveToPage(_ pageMenu: PageMenuView, to viewController: UIViewController, index currentViewControllerIndex: Int)
 }
 
 // MARK: - Page Menu Option
-struct PageMenuOption {
+public struct PageMenuOption {
     
     var frame: CGRect
     var menuItemHeight: CGFloat
@@ -28,7 +28,7 @@ struct PageMenuOption {
     var menuIndicatorHeight: CGFloat
     var menuIndicatorColor: UIColor
     
-    init(frame: CGRect,
+    public init(frame: CGRect,
          menuItemHeight: CGFloat = 44,
          menuItemWidth: CGFloat = 0,
          menuItemBackgroundColorNormal: UIColor = .white,
@@ -54,9 +54,9 @@ struct PageMenuOption {
 }
 
 // MARK: - Page Menu
-class PageMenuView: UIView {
+public class PageMenuView: UIView {
     
-    var delegate: PageMenuViewDelegate?
+    public var delegate: PageMenuViewDelegate?
     
     fileprivate let cellId = "PageMenuCell"
     fileprivate var option = PageMenuOption(frame: .zero)
@@ -70,7 +70,7 @@ class PageMenuView: UIView {
         self.init(viewControllers: [], option: PageMenuOption(frame: .zero))
     }
     
-    init(viewControllers: [UIViewController], option: PageMenuOption) {
+    public init(viewControllers: [UIViewController], option: PageMenuOption) {
         super.init(frame: option.frame)
         self.viewControllers = viewControllers
         self.option = option
@@ -148,7 +148,7 @@ extension PageMenuView: UIScrollViewDelegate {
         menuScrollView.addSubview(menuBorderLine)
     }
     
-    func updateMenuTitle(title: String, viewControllerIndex: Int) {
+    public func updateMenuTitle(title: String, viewControllerIndex: Int) {
         let buttonIndex = viewControllerIndex + 1
         guard let menuButton = menuScrollView.viewWithTag(buttonIndex)
             as? UIButton else { return }
@@ -260,7 +260,7 @@ extension PageMenuView: UICollectionViewDelegate, UICollectionViewDataSource {
         addSubview(collectionView)
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         guard let controllerView = viewControllers[indexPath.row].view else {
             return UICollectionViewCell()
@@ -270,7 +270,7 @@ extension PageMenuView: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewControllers.count
     }
     
@@ -316,7 +316,7 @@ extension PageMenuView {
         NotificationCenter.default.addObserver(self, selector: #selector(didChangeRotation), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
-    override func removeFromSuperview() {
+    override public func removeFromSuperview() {
         super.removeFromSuperview()
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
