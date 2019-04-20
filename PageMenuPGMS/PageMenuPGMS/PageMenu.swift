@@ -16,17 +16,17 @@ public protocol PageMenuViewDelegate: class {
 // MARK: - Page Menu Option
 public struct PageMenuOption {
     
-    var frame: CGRect
-    var menuItemHeight: CGFloat
-    var menuItemWidth: CGFloat
-    var menuItemBackgroundColorNormal: UIColor
-    var menuItemBackgroundColorSelected: UIColor
-    var menuTitleMargin: CGFloat
-    var menuTitleFont: UIFont
-    var menuTitleColorNormal: UIColor
-    var menuTitleColorSelected: UIColor
-    var menuIndicatorHeight: CGFloat
-    var menuIndicatorColor: UIColor
+    public var frame: CGRect
+    public var menuItemHeight: CGFloat
+    public var menuItemWidth: CGFloat
+    public var menuItemBackgroundColorNormal: UIColor
+    public var menuItemBackgroundColorSelected: UIColor
+    public var menuTitleMargin: CGFloat
+    public var menuTitleFont: UIFont
+    public var menuTitleColorNormal: UIColor
+    public var menuTitleColorSelected: UIColor
+    public var menuIndicatorHeight: CGFloat
+    public var menuIndicatorColor: UIColor
     
     public init(frame: CGRect,
          menuItemHeight: CGFloat = 44,
