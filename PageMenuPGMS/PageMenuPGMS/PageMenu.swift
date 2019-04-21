@@ -274,7 +274,7 @@ extension PageMenuView: UICollectionViewDelegate, UICollectionViewDataSource {
         return viewControllers.count
     }
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         if scrollView == menuScrollView { return }
         
         // PageMenuViewDelegate [WillMoveToPage]
@@ -284,7 +284,7 @@ extension PageMenuView: UICollectionViewDelegate, UICollectionViewDataSource {
                                  index: viewControllerIndex)
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if scrollView == menuScrollView { return }
         let buttonIndex = getCurrentMenuButtonIndex()
         updateIndicatorPosition(menuButtonIndex: buttonIndex)
@@ -298,7 +298,7 @@ extension PageMenuView: UICollectionViewDelegate, UICollectionViewDataSource {
                                 index: viewControllerIndex)
     }
     
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
         if scrollView == menuScrollView { return }
         
         // PageMenuViewDelegate [DidMoveToPage]
