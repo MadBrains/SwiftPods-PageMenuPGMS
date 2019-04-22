@@ -58,13 +58,13 @@ public class PageMenuView: UIView {
     
     public var delegate: PageMenuViewDelegate?
     
-    fileprivate let cellId = "PageMenuCell"
-    fileprivate var option = PageMenuOption(frame: .zero)
-    fileprivate var viewControllers = [UIViewController]()
+    public let cellId = "PageMenuCell"
+    public var option = PageMenuOption(frame: .zero)
+    public var viewControllers = [UIViewController]()
     
-    fileprivate var menuScrollView: UIScrollView!
-    fileprivate var menuBorderLine: UIView!
-    fileprivate var collectionView: UICollectionView!
+    public var menuScrollView: UIScrollView!
+    public var menuBorderLine: UIView!
+    public var collectionView: UICollectionView!
     
     convenience init() {
         self.init(viewControllers: [], option: PageMenuOption(frame: .zero))
