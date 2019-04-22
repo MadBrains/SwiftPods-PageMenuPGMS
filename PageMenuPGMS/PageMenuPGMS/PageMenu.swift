@@ -313,12 +313,12 @@ extension PageMenuView: UICollectionViewDelegate, UICollectionViewDataSource {
 extension PageMenuView {
     
     fileprivate func setuOrientationpNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(didChangeRotation), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didChangeRotation), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     override public func removeFromSuperview() {
         super.removeFromSuperview()
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
     @objc fileprivate func didChangeRotation() {
@@ -385,7 +385,7 @@ extension PageMenuView {
 // MARK: - UIButton Extension
 extension UIButton {
     
-    fileprivate func setBackgroundColor(_ color: UIColor, forState: UIControlState) {
+    fileprivate func setBackgroundColor(_ color: UIColor, forState: UIControl.State) {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         UIGraphicsGetCurrentContext()?.setFillColor(color.cgColor)
         UIGraphicsGetCurrentContext()?.fill(CGRect(x: 0, y: 0, width: 1, height: 1))

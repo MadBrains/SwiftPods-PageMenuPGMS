@@ -12,9 +12,9 @@
 
 /* Begin PBXFileReference section */
 		318F72A91C10B1C315FBAF1E433A2A7F /* Pods-PageMenuPGMS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PageMenuPGMS-dummy.m"; sourceTree = "<group>"; };
-		7D0F68696628DDA5B87B34A85EC12AB5 /* libPods-PageMenuPGMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PageMenuPGMS.a"; path = "libPods-PageMenuPGMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D0F68696628DDA5B87B34A85EC12AB5 /* libPods-PageMenuPGMS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PageMenuPGMS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99069C9519A9C12722D65156FF1125B2 /* Pods-PageMenuPGMS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PageMenuPGMS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B94FA4D13846D61E0584FB36D942BEA6 /* Pods-PageMenuPGMS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageMenuPGMS.debug.xcconfig"; sourceTree = "<group>"; };
 		C04416F10EEEBC08DCA746934E5DFAD6 /* Pods-PageMenuPGMS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PageMenuPGMS-acknowledgements.plist"; sourceTree = "<group>"; };
 		CEE26975B5F96BC69F2FCF72EC380671 /* Pods-PageMenuPGMS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PageMenuPGMS.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -177,7 +177,7 @@
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
