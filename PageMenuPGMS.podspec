@@ -8,7 +8,7 @@ s.summary = "PageMenuPGMS create page menu"
 s.requires_arc = true
 
 # 2
-s.version = "0.0.9"
+s.version = "0.0.10"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -20,7 +20,7 @@ s.author = { "Semenov Anton" => "Feso94@yandex.ru" }
 s.homepage = "https://github.com/Feskoxoxo/SwiftPods-PageMenuPGMS"
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => "https://github.com/Feskoxoxo/SwiftPods-PageMenuPGMS.git", 
+s.source = { :git => "https://github.com/MadBrains/SwiftPods-PageMenuPGMS.git", 
              :tag => "#{s.version}" }
 
 # 7

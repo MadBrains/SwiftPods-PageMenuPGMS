@@ -77,7 +77,6 @@ public class PageMenuView: UIView {
         backgroundColor = .white
         setupMenus()
         setupPageView()
-        setuOrientationpNotification()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -311,15 +310,6 @@ extension PageMenuView: UICollectionViewDelegate, UICollectionViewDataSource {
 
 // MARK: - Device Orientation
 extension PageMenuView {
-    
-    fileprivate func setuOrientationpNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(didChangeRotation), name: UIDevice.orientationDidChangeNotification, object: nil)
-    }
-    
-    override public func removeFromSuperview() {
-        super.removeFromSuperview()
-        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
-    }
     
     @objc fileprivate func didChangeRotation() {
         menuScrollView.frame = CGRect(x: 0, y: 0,
