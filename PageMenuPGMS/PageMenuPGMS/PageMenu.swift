@@ -212,14 +212,19 @@ extension PageMenuView: UIScrollViewDelegate {
     
     @objc fileprivate func selectedMenuItem(_ sender: UIButton) {
         // PageMenuViewDelegate [WillMoveToPage]
+        selectTab(index: sender.tag - 1)
+    }
+    
+    public func selectTab(index: Int) {
+        // PageMenuViewDelegate [WillMoveToPage]
         let currentViewControllerIndex = getCurrentMenuButtonIndex() - 1
         delegate?.willMoveToPage(self,
                                  from: viewControllers[currentViewControllerIndex],
                                  index: currentViewControllerIndex)
         
         // Move to selected page
-        let buttonIndex = sender.tag
-        let nextViewControllerIndex = sender.tag - 1
+        let buttonIndex = index + 1
+        let nextViewControllerIndex = index
         updateIndicatorPosition(menuButtonIndex: buttonIndex)
         updateButtonStatus(menuButtonIndex: buttonIndex)
         updateMenuScrollOffsetIfNeeded(menuButtonIndex: buttonIndex)
