@@ -8,7 +8,7 @@ s.summary = "PageMenuPGMS create page menu"
 s.requires_arc = true
 
 # 2
-s.version = "0.0.13"
+s.version = "0.0.14"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -31,6 +31,6 @@ s.frameworks = "UIKit", "Foundation"
 s.source_files = "PageMenuPGMS/**/*.{swift}"
 
 # 10
-s.swift_version = "4.2"
+s.swift_version = "5.0"
 
 end
